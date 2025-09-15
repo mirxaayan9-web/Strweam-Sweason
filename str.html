@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Strweam Sweason - Meme Coin</title>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #333;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* ✅ Lollipop Background */
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/image/str.jpg') repeat center center;
+    background-size: 1600px 800px;
+    filter: blur(0px);
+    z-index: -1;
+  }
+
+  header {
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  header h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3rem;
+    animation: bounce 1s infinite alternate, pulse 2s infinite;
+  }
+
+  header h1 i {
+    margin-left: 10px;
+    color: #cf6262;
+  }
+
+  header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #474646;
+  }
+
+  .red-text {
+    color: #e60017;
+  }
+
+  .black-text {
+    color: #111111;
+  }
+
+    #CA {
+      background-color: #f16666;
+      color: black;
+      border-radius: 10px;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.1rem;
+      margin: 10px auto 0 auto;
+      text-align: center;
+      height: 40px;
+      width: 500px;
+      line-height: 40px;
+  }
+
+
+  .meme-card, .tokonomics-card, .links-card {
+    background: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-align: left;
+  }
+
+  .meme-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #ff4b5c;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .meme-card h2, .tokonomics-card h2, .links-card h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .meme-card p, .tokonomics-card p, .tokonomics-card li, .links-card a {
+    font-size: 1rem;
+    margin: 8px 0;
+    text-decoration: none;
+    color: #ff4b5c;
+    font-weight: bold;
+  }
+
+
+  /* ✅ Smooth Invest Button Hover */
+  .meme-card button {
+    background: linear-gradient(90deg, #ff4b5c, #ff9a9e);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .meme-card button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 75, 92, 0.4);
+    background: linear-gradient(90deg, #ff6f91, #ff9a9e);
+  }
+
+  /* ✅ Smooth Social Icons Hover */
+  .links-card a {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .links-card a:hover {
+    transform: scale(1.2);
+    color: #ff4b5c;
+  }
+
+  footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #4b4a4a;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    animation: fall 1s linear forwards;
+  }
+
+  @keyframes bounce {
+    from { transform: translateY(0);}
+    to { transform: translateY(-10px);}
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1);}
+    50% { transform: scale(1.05);}
+    100% { transform: scale(1);}
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="background"></div>
+
+<header>
+  <h1>
+    <span class="red-text">Strweam</span> 
+    <span class="black-text">Sweason</span> 🍭<i class="fas fa-candy fa-spin"></i>
+  </h1>
+  <p>The craziest crypto meme you've ever seen!</p>
+</header>
+
+<div class="meme-card">
+  <img src="image/image.jpg" alt="Meme Coin Face">
+  <h2>Buy Strweam Coin!</h2>
+  <p>Get rich, get laughs, or just confuse your friends!</p>
+  <button onclick="invest()">Invest Now!</button>
+  <p id="CA">CA: <code>0x1234ABCD5678EFGH9012IJKL3456MNOP7890QRST</code></p>
+</div>
+
+<div class="tokonomics-card">
+  <h2>Tokonomics 💰</h2>
+  <ul>
+    <li><strong>Total Supply:</strong> 1,000,000,000 <span style="color: #ff0000;">$STRWM</span>  (billion vibes only)</li>
+    <li><strong>Liquidity Pool:</strong> 50% locked forever, cuz we ain’t playin’</li>
+    <li><strong>Dev Wallet:</strong> 5% (spent on memes & rocket fuel)</li>
+    <li><strong>Rewards:</strong> 10% to hodlers & meme lords</li>
+    <li><strong>Swap:</strong> Pumpfun-style, cuz why not</li>
+  </ul>
+  <p>Disclaimer: Strweam Coin is purely 100% meme vibes. Not financial advice, just laughs & moon dreams 🍭😂</p>
+</div>
+
+<div class="links-card">
+  <h2>Links & Socials 🌐</h2>
+  <div style="display:flex; justify-content:center; gap:20px; margin-top:15px;">
+    <a href="https://t.me/StrweamCoin" target="_blank" title="Telegram">
+      <i class="fab fa-telegram fa-2x" style="color:#0088cc;"></i>
+    </a>
+    <a href="https://discord.gg/StrweamCoin" target="_blank" title="Discord">
+      <i class="fab fa-discord fa-2x" style="color:#7289da;"></i>
+    </a>
+    <a href="https://twitter.com/StrweamCoin" target="_blank" title="Twitter">
+      <i class="fab fa-twitter fa-2x" style="color:#1da1f2;"></i>
+    </a>
+    <a href="https://medium.com/@StrweamCoin" target="_blank" title="Medium">
+      <i class="fab fa-medium fa-2x" style="color:#000000;"></i>
+    </a>
+    
+    <a href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0x1234ABCD5678EFGH9012IJKL3456MNOP7890QRST" target="_blank" title="Swap">
+      <i class="fas fa-exchange-alt fa-2x" style="color:#ffcb77;"></i>
+    </a>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Strweam Sweason. All memes reserved!
+</footer>
+
+<script>
+  function randomColor() {
+    const colors = ['#ff4b5c', '#ff9a9e', '#ffc371', '#ff6f91', '#ffcb77', '#c94b4b'];
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
+
+  function invest() {
+    alert("🍭 You are now a proud investor in Strweam Coin! 🎉");
+    for(let i = 0; i < 30; i++) createConfetti();
+    emojiRain();
+  }
+
+  function createConfetti() {
+    const confetti = document.createElement('div');
+    confetti.classList.add('confetti');
+    confetti.style.left = Math.random() * 100 + '%';
+    confetti.style.background = randomColor();
+    document.body.appendChild(confetti);
+    setTimeout(() => confetti.remove(), 1000);
+  }
+
+  function emojiRain() {
+    const emojis = ['🍭','💰','😂','🔥','🚀','🍬','💎'];
+    for(let i = 0; i < 20; i++) {
+      let span = document.createElement('span');
+      span.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      span.style.position = 'fixed';
+      span.style.fontSize = '2rem';
+      span.style.left = Math.random() * 100 + 'vw';
+      span.style.top = '-50px';
+      span.style.animation = 'fall 3s linear forwards';
+      document.body.appendChild(span);
+      setTimeout(() => span.remove(), 3000);
+    }
+  }
+</script>
+
+</body>
+</html>
